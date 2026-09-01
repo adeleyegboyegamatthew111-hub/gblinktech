@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GBLINK Tech | Elite Resume, CV & Web Development Agency</title>
+<meta name="description" content="GBLINK Tech - The #1 Premium Agency for ATS Resume, CV, LinkedIn & High-Converting Websites. 500+ Global Clients. Paystack + Flutterwave + PayPal.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; connect-src 'self' https://api.paystack.co https://api.flutterwave.com https://wa.me">
+<script src="https://js.paystack.co/v2/inline.js"></script>
+<script src="https://checkout.flutterwave.com/v3.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #050A18; --card: #0D1226; --royal: #3B82F6; --gold: #FBBF24; --platinum: #F8FAFC; --text: #CBD5E1; --success: #22C55E; --fw: #F97316; --danger: #EF4444; }
+  body.light { --bg: #F8FAFC; --card: #FFFFFF; --text: #0F172A; --platinum: #0F172A; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+  html { scroll-behavior: smooth; }
+  body { color: var(--text); background: var(--bg); }
+
+  .topbar { background: linear-gradient(90deg, var(--gold), #F59E0B); color: #000; text-align: center; padding: 10px; font-weight: 800; font-size: 0.85rem; position: sticky; top: 0; z-index: 9999; }
+  .topbar a { color: #000; text-decoration: none; margin: 0 10px; }
+
+  header { background: rgba(5,10,24,0.7); backdrop-filter: blur(20px); color: var(--platinum); padding: 20px 80px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 40px; z-index: 9998; border-bottom: 1px solid #1E293B; }
+  .logo { display: flex; align-items: center; gap: 14px; font-family: 'Clash Display', sans-serif; font-size: 2rem; color: var(--gold); font-weight: 800; }
+  .logo-icon { width: 52px; height: 52px; background: linear-gradient(135deg, var(--royal), var(--gold)); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 1.6rem; box-shadow: 0 0 20px rgba(251,191,36,0.3); }
+  nav a { color: var(--platinum); margin-left: 30px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+  nav a:hover { color: var(--gold); }
+  .theme-toggle { background: transparent; border: 2px solid var(--gold); color: var(--gold); padding: 10px 18px; border-radius: 50px; cursor: pointer; font-weight: 700; margin-left: 20px; }
+  .cart-icon { cursor:pointer; margin-left:20px; position:relative; font-size:22px; }
+  .cart-count { position:absolute; top:-8px; right:-10px; background:var(--success); color:#fff; border-radius:50%; width:22px; height:22px; font-size:12px; display:flex; align-items:center; justify-content:center; font-weight:800; }
+
+  .hero { padding: 140px 60px; text-align: center; background: radial-gradient(1200px 600px at 50% -10%, rgba(59,130,246,0.25), transparent), url('https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600') center/cover fixed; }
+  .hero-flex { display:flex; align-items:center; justify-content:center; gap:80px; max-width:1400px; margin:auto; flex-wrap:wrap; }
+  .hero-text { flex:1; min-width:350px; text-align:left; }
+  .hero-img { flex:1; min-width:320px; text-align:center; }
+  .hero-img img { width: 100%; max-width: 420px; border-radius: 30px; border: 4px solid var(--gold); box-shadow: 0 30px 80px rgba(59,130,246,.4); transition:.4s; }
+  .hero-img img:hover { transform:scale(1.04) rotate(-1deg); }
+  .ceo-name { margin-top:20px; font-family:'Clash Display'; font-weight:800; font-size:1.5rem; color:var(--gold); }
+  .hero h1 { font-family:'Clash Display'; font-size: 4rem; font-weight: 800; color: var(--platinum); line-height: 1.05; margin-bottom:20px; background: linear-gradient(90deg, #fff, var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero p { font-size: 1.3rem; color: #94A3B8; margin-bottom:30px; max-width:600px; }
+  .trust-badges{display:flex;gap:15px;margin:30px 0;flex-wrap:wrap}
+  .trust-item{background:rgba(59,130,246,.15); border:1px solid var(--royal); padding:10px 18px;border-radius:50px;font-size:.9rem;font-weight:700; color:var(--royal)}
+  .btn { background: linear-gradient(90deg, var(--royal), var(--gold)); color: #fff; padding: 18px 38px; border: none; border-radius: 14px; font-size: 1.05rem; font-weight: 800; cursor: pointer; text-decoration: none; display: inline-block; transition: 0.3s; margin: 8px; box-shadow: 0 10px 30px rgba(59,130,246,0.3); }
+  .btn:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 15px 40px rgba(251,191,36,0.4); }
+  .btn-outline { background:transparent; border:2px solid var(--platinum); }
+  .btn-outline:hover { background:var(--platinum); color:var(--bg); }
+  .btn-success { background: var(--success); }
+  .btn-fw { background: var(--fw); }
+
+  section { padding: 120px 80px; }
+  h2.section-title { text-align:center; margin-bottom:70px; font-family:'Clash Display'; font-size:3.2rem; color:var(--gold); font-weight: 800; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:40px; }
+  .price-card { background: var(--card); padding: 45px; border-radius: 24px; border: 1px solid #1E293B; transition: 0.4s; text-align:center; position:relative; overflow:hidden; }
+  .price-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:4px; background: linear-gradient(90deg, var(--royal), var(--gold)); }
+  .price-card:hover { transform: translateY(-10px); border-color: var(--gold); box-shadow: 0 20px 50px rgba(251,191,36,0.15); }
+  .price-card h3 { font-family:'Clash Display'; color: var(--gold); font-size: 1.8rem; margin-bottom: 20px; font-weight:800; }
+  .price { font-size:2.8rem; font-weight:900; color:var(--success); margin:20px 0; }
+  .price-card li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #334155; list-style:none; }
+
+  .referral-box { background: linear-gradient(135deg, var(--royal), #7C3AED); padding: 50px; border-radius: 24px; text-align:center; color:#fff; margin: 80px auto; max-width:1000px; }
+  .referral-box h3 { font-family:'Clash Display'; font-size:2.2rem; margin-bottom:15px; }
+  .referral-link { background:#000; padding:15px; border-radius:12px; margin:20px 0; font-weight:700; font-size:1.1rem; cursor:pointer; }
+  
+  .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 100000; align-items: center; justify-content: center; }
+  .modal-content { background: var(--card); padding: 50px; border-radius: 24px; max-width: 550px; border: 2px solid var(--gold); text-align:center; }
+  .success-icon { font-size: 80px; color: var(--success); margin-bottom: 20px; }
+  .bank-detail { background: #000; padding: 16px; border-radius: 12px; margin: 12px 0; font-weight: 700; border:1px solid #334155; text-align:left; }
+
+  .cart-sidebar { position: fixed; right: -420px; top: 0; width: 400px; height: 100%; background: var(--card); transition: 0.4s; z-index: 99999; padding: 40px; overflow-y: auto; border-left: 3px solid var(--gold); box-shadow: -20px 0 60px rgba(0,0,0,0.5); }
+  .cart-sidebar.active { right: 0; }
+
+  .fab { position: fixed; bottom: 30px; right: 30px; z-index: 99997; display: flex; flex-direction: column; gap: 18px; }
+  .fab-btn { width: 65px; height: 65px; border-radius: 50%; background: var(--success); display: flex; align-items: center; justify-content: center; font-size: 26px; text-decoration: none; box-shadow: 0 10px 30px rgba(34,197,94,0.4); }
+
+  footer { background: #000; color: #64748B; text-align: center; padding: 50px; border-top:1px solid #1E293B; }
+  @media(max-width: 900px) { .hero-flex{flex-direction:column-reverse;text-align:center} .hero-text{text-align:center} header { padding: 20px 20px; } section { padding: 80px 20px; } .hero h1 { font-size: 2.8rem; } .cart-sidebar{width:100%;} }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  🔒 SECURE PAYMENTS | 📧 <a href="mailto:adeleyegboyegamatthew111@gmail.com">adeleyegboyegamatthew111@gmail.com</a> |
+  📱 <a href="tel:+2348084499959">+234 808 449 9959</a> |
+  🌍 Paystack + Flutterwave + PayPal + Bank
+</div>
+
+<!-- SUCCESS MODAL - NEW -->
+<div id="successModal" class="modal">
+  <div class="modal-content">
+    <div class="success-icon">✅</div>
+    <h2 style="color:var(--gold); font-family:'Clash Display'; font-size:2rem;">Payment Successful!</h2>
+    <p id="successText">Thank you! We received your payment and our team will contact you on WhatsApp in 5 minutes.</p>
+    <p><b>Reference:</b> <span id="successRef"></span></p>
+    <button onclick="closeSuccessModal()" class="btn" style="width:100%; margin-top:20px;">Continue</button>
+  </div>
+</div>
+
+<!-- BANK MODAL -->
+<div id="bankModal" class="modal">
+  <div class="modal-content">
+    <h2 style="color:var(--gold); margin-bottom:20px; font-family:'Clash Display';">🏦 Bank Transfer</h2>
+    <p>Pay in ANY currency. USD, EUR, GBP, NGN. Send proof after payment.</p>
+    <div class="bank-detail"><b>Bank:</b> Kredi Money MFB Ltd</div>
+    <div class="bank-detail"><b>Account Name:</b> Adeleye Adegboyega Matthew</div>
+    <div class="bank-detail"><b>Account Number:</b> 1810581946</div>
+    <div class="bank-detail"><b>Total:</b> $<span id="modalTotal">0</span> or equivalent</div>
+    <a href="https://wa.me/2348084499959?text=Payment%20Proof%20Attached" target="_blank" class="btn btn-success" style="width:100%; margin-top:15px;">📤 Send Payment Proof</a>
+    <button onclick="closeBankModal()" class="btn" style="width:100%; margin-top:10px; background:#475569;">Close</button>
+  </div>
+</div>
+
+<header>
+  <div class="logo"><div class="logo-icon">GT</div>GBLINK TECH</div>
+  <nav>
+    <a href="#pricing">Services</a>
+    <a href="#referral">Refer & Earn</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    <span class="cart-icon" onclick="toggleCart()">🛒 <span class="cart-count" id="cartCount">0</span></span>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-flex">
+    <div class="hero-text">
+      <h1>Elite Careers & Brands That Dominate</h1>
+      <p>We write ATS Resumes that get interviews and build Websites that print money. Handled personally by the CEO. 48hr Delivery. Money Back Guarantee.</p>
+      <div class="trust-badges">
+        <div class="trust-item">✅ 500+ Global Clients</div>
+        <div class="trust-item">⭐ 4.9/5 Rating</div>
+        <div class="trust-item">⚡ 48hr Delivery</div>
+        <div class="trust-item">💰 100% Refund</div>
+      </div>
+      <div>
+        <a href="#pricing" class="btn">Get Started Now</a>
+        <a href="#contact" class="btn btn-outline">Free Strategy Call</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="ceo-3d.jpg" alt="Gblink Tech CEO">
+      <div class="ceo-name">Gblink CEO</div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2 class="section-title">Premium Service Packages</h2>
+  <div class="grid">
+    <div class="price-card"><h3>🚀 Resume Elite</h3><ul><li>ATS Resume <span>$20</span></li><li>LinkedIn Optimization <span>$15</span></li><li>Cover Letter <span>$10</span></li><li><b>Full Bundle</b> <span>$35</span></li></ul><div class="price">$35</div><button class="btn" style="width:100%;" onclick="addToCart('Resume Bundle', 35)">Add to Cart</button></div>
+    <div class="price-card"><h3>💻 Website Pro</h3><ul><li>Business Website <span>$70</span></li><li>Ecommerce Store <span>$120</span></li><li>SEO + Hosting Setup <span>$50</span></li><li><b>Premium Pro</b> <span>$150</span></li></ul><div class="price">$150</div><button class="btn" style="width:100%;" onclick="addToCart('Website Package', 150)">Add to Cart</button></div>
+    <div class="price-card"><h3>📚 Creator Bundle</h3><ul><li>Storybook Writing <span>$50</span></li><li>Brand Kit + Logo <span>$90</span></li><li>Book Trailer Video <span>$60</span></li><li><b>Creator Bundle</b> <span>$180</span></li></ul><div class="price">$180</div><button class="btn" style="width:100%;" onclick="addToCart('Content Bundle', 180)">Add to Cart</button></div>
+  </div>
+</section>
+
+<!-- NEW REFERRAL SECTION -->
+<section id="referral">
+  <div class="referral-box">
+    <h3>💎 Refer & Earn 15% Commission</h3>
+    <p>Share GBLINK with friends worldwide. When they buy, you get 15% cash instantly.</p>
+    <div class="referral-link" onclick="copyReferral()">https://gblink.tech?ref=YOUR_NAME</div>
+    <button class="btn btn-outline" onclick="copyReferral()">📋 Copy Your Referral Link</button>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Let's Work Together</h2>
+  <div style="max-width:700px; margin:0 auto; background:var(--card); padding:50px; border-radius:24px; border:1px solid #334155;">
+    <form id="contactForm" style="display:grid; gap:18px;">
+      <input type="text" name="name" placeholder="Your Name" required style="padding:16px; border-radius:12px; background:#000; border:2px solid #334155; color:var(--text); font-size:1rem;">
+      <input type="email" name="email" placeholder="Your Email" required style="padding:16px; border-radius:12px; background:#000; border:2px solid #334155; color:var(--text); font-size:1rem;">
+      <textarea name="message" rows="5" placeholder="Tell me about your project..." required style="padding:16px; border-radius:12px; background:#000; border:2px solid #334155; color:var(--text); font-size:1rem;"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<div class="cart-sidebar" id="cart">
+  <h2 style="color:var(--gold); margin-bottom:25px; font-family:'Clash Display';">🛒 Your Order</h2>
+  <div id="cartItems"></div>
+  <h3 style="margin:25px 0; font-size:1.8rem;">Total: $<span id="cartTotal">0</span></h3>
+  
+  <button class="btn" style="width:100%;" onclick="checkoutPaystack()">💳 Pay with Card - Paystack</button>
+  <button class="btn btn-fw" style="width:100%; margin-top:12px;" onclick="checkoutFlutterwave()">🌍 Pay with PayPal - Flutterwave</button>
+  <button class="btn btn-success" style="width:100%; margin-top:12px;" onclick="payWithBank()">🏦 Bank Transfer</button>
+  <button class="btn" style="width:100%; margin-top:12px; background:#475569;" onclick="toggleCart()">Close</button>
+</div>
+
+<div class="fab">
+  <a href="tel:+2348084499959" class="fab-btn">📞</a>
+  <a href="https://wa.me/2348084499959" class="fab-btn" style="background:#25D366;">💬</a>
+</div>
+
+<footer>
+  <div class="logo" style="justify-content:center; margin-bottom:20px;"><div class="logo-icon">GT</div>GBLINK TECH</div>
+  <p>🔒 Protected by Paystack + Flutterwave + Cloudflare Security</p>
+  <p>📧 adeleyegboyegamatthew111@gmail.com | 📱 +234 808 449 9959</p>
+  <p>© 2026 Gblink Tech. The #1 Premium Agency Worldwide.</p>
+</footer>
+
+<script>
+window.addEventListener('load', () => { document.getElementById('loader').style.display = 'none'; });
+
+function toggleTheme(){
+  document.body.classList.toggle('light');
+  localStorage.setItem('theme', document.body.classList.contains('light')? 'light' : 'dark');
+}
+if(localStorage.getItem('theme') === 'light') document.body.classList.add('light');
+
+let cart = [];
+const ADMIN_PHONE = "2348084499959";
+const PAYSTACK_KEY = "pk_live_YOUR_LIVE_KEY_HERE"; // REPLACE THIS
+const FLUTTERWAVE_KEY = "FLWPUBK_YOUR_LIVE_KEY_HERE"; // REPLACE THIS
+
+function addToCart(name, price) { cart.push({name, price}); updateCart(); toggleCart(); }
+function updateCart() {
+  document.getElementById('cartCount').innerText = cart.length;
+  let items = document.getElementById('cartItems'); items.innerHTML = ''; let total = 0;
+  cart.forEach(item => { total += item.price; items.innerHTML += `<div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid #334155;">${item.name} <span>$${item.price}</span></div>`; });
+  document.getElementById('cartTotal').innerText = total;
+}
+function toggleCart() { document.getElementById('cart').classList.toggle('active'); }
+
+// ERROR HANDLING ADDED - ZERO ERROR FOR CUSTOMERS
+function handlePaymentError(gateway, error){
+  console.error(gateway + " Error:", error);
+  alert(`❌ Payment could not be processed. Please try another method or contact us on WhatsApp: +2348084499959\nError: ${error || 'Network issue'}`);
+}
+
+function checkoutPaystack() {
+  if(cart.length === 0) return alert('Cart is empty');
+  let total = cart.reduce((sum, item) => sum + item.price, 0);
+  let customerEmail = prompt("Enter your email for receipt:");
+  if(!customerEmail) return;
+  try {
+    let handler = PaystackPop.setup({
+      key: PAYSTACK_KEY, 
+      email: customerEmail, 
+      amount: total * 100,
+      currency: "USD",
+      ref: 'GBLNK_'+Date.now(),
+      channels: ['card', 'bank', 'ussd', 'qr', 'bank_transfer'],
+      callback: function(response){ successPayment('Paystack', response.reference); },
+      onClose: function(){}
+    });
+    handler.openIframe();
+  } catch(e) { handlePaymentError('Paystack', e.message); }
+}
+
+function checkoutFlutterwave() {
+  if(cart.length === 0) return alert('Cart is empty');
+  let total = cart.reduce((sum, item) => sum + item.price, 0);
+  let customerEmail = prompt("Enter your email for PayPal/Card:");
+  if(!customerEmail) return;
+  try {
+    FlutterwaveCheckout({
+      public_key: FLUTTERWAVE_KEY,
+      tx_ref: 'GBLNK_FW_'+Date.now(),
+      amount: total,
+      currency: "USD",
+      country: "US",
+      payment_options: "card, banktransfer, ussd, paypal, mobilemoney",
+      customer: { email: customerEmail, name: "GBLINK Client" },
+      customizations: { title: "GBLINK Tech Payment", description: cart.map(i=>i.name).join(', ') },
+      callback: function (data) {
+        if(data.status === "successful"){ successPayment('Flutterwave', data.transaction_id); }
+        else { handlePaymentError('Flutterwave', 'Payment not successful'); }
+      },
+      onclose: function() {},
+    });
+  } catch(e) { handlePaymentError('Flutterwave', e.message); }
+}
+
+function successPayment(gateway, ref){
+  document.getElementById('successRef').innerText = ref;
+  document.getElementById('successText').innerText = `Thank you! Payment via ${gateway} was successful. Our CEO will contact you on WhatsApp in 5 minutes to start your project.`;
+  document.getElementById('successModal').style.display = 'flex';
+  let orderDetails = cart.map(i=>i.name).join(', ');
+  window.open(`https://wa.me/${ADMIN_PHONE}?text=New%20PAID%20Order%20${gateway}:%20${orderDetails}%20-%20Ref:%20${ref}`, '_blank');
+  cart = []; updateCart(); toggleCart();
+}
+
+function closeSuccessModal(){ document.getElementById('successModal').style.display = 'none'; }
+function payWithBank(){ let total = cart.reduce((sum, item) => sum + item.price, 0); document.getElementById('modalTotal').innerText = total; document.getElementById('bankModal').style.display = 'flex'; }
+function closeBankModal(){ document.getElementById('bankModal').style.display = 'none'; }
+function copyReferral(){ navigator.clipboard.writeText("https://gblink.tech?ref=YOUR_NAME"); alert('Referral link copied! Share it to earn 15%'); }
+
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault(); const formData = new FormData(this);
+  let msg = `New Lead from GBLINK Website:\nName: ${formData.get('name')}\nEmail: ${formData.get('email')}\nMessage: ${formData.get('message')}`;
+  window.open(`https://wa.me/${ADMIN_PHONE}?text=${encodeURIComponent(msg)}`, '_blank'); this.reset();
+  alert('Message sent! We will reply on WhatsApp within 2 hours.');
+});
+</script>
+</body>
+</html>
